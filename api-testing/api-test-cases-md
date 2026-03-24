@@ -1,1 +1,40 @@
+# API Test Cases
 
+## TC-API-001: Successful login
+
+Endpoint: POST /api/login  
+
+Request body:
+{
+  "email": "eve.holt@reqres.in",
+  "password": "cityslicka"
+}
+
+Expected result:
+- Status code: 200  
+- Response contains token  
+
+---
+
+## TC-API-002: Login without password
+
+Endpoint: POST /api/login  
+
+Request body:
+{
+  "email": "peter@klaven"
+}
+
+Expected result:
+- Status code: 400  
+- Error message returned  
+
+---
+
+## TC-API-003: Get users list
+
+Endpoint: GET /api/users?page=2  
+
+Expected result:
+- Status code: 200  
+- List of users returned
